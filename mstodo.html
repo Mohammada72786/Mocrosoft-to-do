@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft TODO</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://res-1.cdn.office.net/todo/778986_2.88.1/touch-icon-152x152.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="mstodo.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+
+<body>
+    <div id="card-top" class="card-top">
+        <div id="apps">
+            <span class="material-symbols-outlined grid-menu">apps</span>
+        </div>
+        <div class="title">To Do</div>
+        <div id="search-box" class="search-box">
+            <span class="material-symbols-outlined" id="search-icon" title="Search">search
+            </span>
+            <input type="text" id="hidden-text-box" class="hidden-text-box" placeholder="Search">
+            <span class="material-symbols-outlined" id="hidden-cross">close</span>
+        </div>
+        <div class="quick-access">
+            <span class="material-symbols-outlined setting" title="Settings">settings</span>
+            <span class="material-symbols-outlined help-and-feedback" title="Help and Support">question_mark </span>
+            <span class="material-symbols-outlined what-is-new" title="what is new">garden_cart</span>
+            <span class="material-symbols-outlined account" title="Account">person</span>
+        </div>
+    </div>
+    <div class="body-content">
+        <div class="left-side">
+            <div class="left-top">
+                <span class="material-symbols-outlined left-item">menu</span>
+                <div class="left-item">
+                    <span class="material-symbols-outlined">light_mode</span>MyDay
+                </div>
+                <div class="left-item" id="important-tasks">
+                    <span class="material-symbols-outlined">grade</span>Important
+                </div>
+                <div class="left-item">
+                    <span class="material-symbols-outlined">calendar_month</span>Planned
+                </div>
+                <div class="left-item">
+                    <span class="material-symbols-outlined">person</span>Assigned to me
+                </div>
+                <div class="left-item">
+                    <span class="material-symbols-outlined">home</span>Tasks
+                </div>
+            </div>
+            <div class="left-bottom">
+                <div id="list-names">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="left-item new-task-list">
+                    <span class="material-symbols-outlined">add</span>
+                    <input type="text" id="list-input" placeholder="New list" maxlength="50">
+                </div>
+                <div class="tools">
+                    <span class="material-symbols-outlined tool">mail</span>
+                    <span class="material-symbols-outlined tool">calendar_month</span>
+                    <span class="material-symbols-outlined tool">group</span>
+                    <span class="material-symbols-outlined tool">attach_file</span>
+                    <span class="material-symbols-outlined tool">done_outline</span>
+                </div>
+            </div>
+        </div>
+        <div class="right-side" id="right-side">
+            <header>
+                <div id="list-heading" class="list-heading">
+                    <span class="material-symbols-outlined" id="list-heading-icon">light_mode</span>
+                    <span id="list-heading-title" class="list-heading-title">My day</span>
+                    <span class="material-symbols-outlined">more_horiz</span>
+                    <div class="right-part">
+                        <span class="material-symbols-outlined">swap_vert</span>Sort
+                        <span class="material-symbols-outlined">emoji_objects</span>Suggestions
+                    </div>
+                </div>
+                <div class="date-time" id="today">
+                    </m>
+                </div>
+            </header>
+            <div class="new-task">
+                <div id="task-title" class="task-title">
+                    <span class="material-symbols-outlined">radio_button_unchecked</span>
+                    <input type="text" placeholder="Add a Task" name="newTask" size=10 class="task-list" maxlength="300" id="task-input">
+                </div>
+                <div class="task-tools">
+                    <span class="material-symbols-outlined" title="Add due date">calendar_month</span>
+                    <div id="due-date-dialog-box">
+                        <ul>
+                            <li class="due-date"><a href="#"><i
+                                        class="fa-solid fa-circle-check"></i><span>Today</span></a>
+                            </li>
+                            <li class="due-date"><a href="#"><span>Tomorrow</span></a></li>
+                            <li class="due-date"> <a href="#"><span>Next Week</span></a></li>
+                            <li class="due-date"><a href="#"><span>Pick date And Time</span></a></li>
+                            <li class="due-date"><a href="#"><span>wekdays</span></a></li>
+                        </ul>
+                    </div>
+                    <span class="material-symbols-outlined" title="Remind Me">notifications</span>
+                    <div id="reminder-me-dialog-box">
+                        <a href="#"><i class="fas fa-calendar-check"></i>
+                            <div class="remind-me">Later Today</div>
+                        </a>
+                        <a href="#">
+                            <div class="remind-me">Tomorrow</div>
+                        </a>
+                        <a href="#">
+                            <div class="remind-me">Next Week</div>
+                        </a>
+                        <a href="#">
+                            <div class="remind-me">Pick A date And Time</div>
+                        </a>
+                    </div>
+                    <span class="material-symbols-outlined" title="Repeat">repeat</span>
+                    <span id="datepicker" title="Repeat">
+                    </span>
+                    <button name="taskButton" id="add-button">Add</button>
+                </div>
+            </div>
+            <div class="tasks">
+                <ol id="task-list" class="task-list">
+                </ol>
+                <span id="warning"></span>
+            </div>
+        </div>
+        <div class="hidden-steps-menu" id="stepsMenu">
+            <div class="selected-task"></div>
+            <div class="box-with-scroll">
+                    <ul id="stepList" class="step-list">
+                    </ul>
+                    <div class="step-input">
+                        <span class="material-symbols-outlined">radio_button_unchecked</span>
+                        <input type="text" maxlength="50" name="step" placeholder="| Add steps">
+                    </div>
+                <div class="step-option">
+                    <span class="material-symbols-outlined">notifications</span> Remind Me
+                </div>
+                <div class="step-option">
+                    <span class="material-symbols-outlined">calendar_month</span> Add due date
+                </div>
+                <div class="step-option">
+                    <span class="material-symbols-outlined">label</span> Pick a Category
+                </div>
+                <div class="step-option">
+                    <span class="material-symbols-outlined">repeat</span>Repeat
+                </div>
+                <div class="step-option">
+                    <span class="material-symbols-outlined">attachment</span>Add a File
+                </div>
+            </div>
+            <div class="hide-delete"><span class="material-symbols-outlined">double_arrow</span><span class="material-symbols-outlined">delete</span></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="mstodo.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

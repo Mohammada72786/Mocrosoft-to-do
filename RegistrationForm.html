@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="registrationform.js"></script>
+    <link rel="stylesheet" href="registrationform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="form">
+        <form action="RegistrationForm.html" method="post" name="registrationForm" onsubmit="return validateForm()">
+            <div class="form-heading">
+                Christmas Day Recital registration Form
+            </div>
+            <div class="attribute">
+                <label for="first-name" id="firstName">First Name
+                    <input id="first-name" type="text" name="firstName" placeholder="First Name" 
+                    pattern="^[a-zA-Z]+[ a-zA-Z]{1,30}$" title="Please Do not use special Symbols or numbers"
+                     required="true">
+                </label>
+                <div id="first-name-warning">Enter first name of participant</div>
+            </div>
+            <div class="attribute">
+                <label for="last-name" id="lastName"  > Last Name
+                    <input id="last-name" type="text" name="lastName" placeholder="Last Name" required="true">
+                </label>
+                <div id="last-name-warning"  >Enter last name of participant</div>
+            </div>
+            <div class="attribute">
+                <label for="trainer" id="trainerName">Trainer's name
+                    <input id="trainer" type="text" name="trainer" placeholder="Trainer's Name" required="true">
+                </label>
+                <div id="trainer-name-warning"  >Enter full name of trainer</div>
+            </div>
+            <div class="attribute">
+                <label for="email"><i class="fas fa-envelope"></i></label>
+                    <input id="email" type="email" name="email" placeholder="example@domain.com" required="true">
+            </div>
+            <div class="attribute">
+                <label for="recital-type">Recital type</label>
+                    <select id="recital-type" required="true">
+                        <option value="">PLEASE SELECT</option>
+                        <option value="MUSIC">MUSIC</option>
+                        <option value="DANCE">DANCE</option>
+                        <option value="SINGING"> SINGING</option>
+                    </select>
+            </div>
+            <div class="attribute gender">
+                <div>Gender</div>
+                <label for="male">MALE
+                <input type="radio" id="male" name="gender" value="MALE" required></radio>
+            </label><br>
+                <label for="female">FEMALE
+                <input id="female" type="radio" name="gender" value="FEMALE"></radio>
+            </label><br>
+                <label for="other">OTHER
+                <input id="other" type="radio"  name="gender" value="OTHER"></radio>
+            </label>
+            
+            </div>
+            <div class="attribute">
+                <label for="instrument">Trainee's instrument
+                    <select name="instrument" id="instrument" required="true">
+                        <option value="">PLEASE SELECT</option>
+                        <option value="PIANO">PIANO</option>
+                        <option value="GUITAR">GUITAR</option>
+                        <option value="SAXOPHONE">SEXOPHONE</option>
+                        <option value="VIOLIN">BIOLIN</option>
+                        <option value="DRUM">DRUM</option>
+                    </select>
+                </label>
+            </div>
+            <div class="attribute">
+                <label for="duration">Total Performance Duration
+                    <input id="duration" type="number" name="duration" placeholder="Total Performance Duration" required="true">
+                </label>
+            </div>
+            <div class="attribute">
+                <label for="date-and-time">Preferred Date and Time
+                    <input id="datetime-local" type="datetime-local" name="dateAndTime" placeholder="Date and Time" required="true">
+                </label>
+            </div>
+            <div class="attribute">
+                <label for="comment" id="userComment">Any Additional Comment
+                    <textarea id="comment" type="textarea" name="comment"
+                     placeholder="Comment Must be between 100 to 1000 characters only" required="true"
+                     spellcheck="true" ></textarea>
+                </label>
+                <div id="comment-warning">A Comment must be between 100 to 1000 characters</div>
+            </div>
+            <div class="attribute">
+                <button class="register-button"> Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

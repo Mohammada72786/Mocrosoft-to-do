@@ -1,0 +1,44 @@
+
+img{
+    margin:auto;
+    display:block;
+    height: 300px;
+    width: 450px;
+}
+img:hover{
+    /*transform:skew(40deg);*/
+   transform:scale(2);
+   /*transform: rotate(40deg);*/
+   /*transform:translate(123px, 123px);*/
+}
+p{
+    border:1px grey;
+    border-radius: 2px;
+    font-size: 20pt;
+    color: brown;
+}
+strike{
+    color:grey;
+    display:inline;
+}
+.box{
+    margin:auto;
+    display:block;
+    background-color: rgb(142, 175, 175);
+    width:500px;
+
+}
+h1{
+    text-align: center;
+}
+button {
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: #ffff;
+    background-color: #4C0000;
+    border-radius: 10px;
+  }

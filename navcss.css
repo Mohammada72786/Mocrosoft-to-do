@@ -1,0 +1,28 @@
+.navbar{
+    background-color: rgb(127, 44, 44);
+    border-radius: 20px;
+}
+.navbar li{
+list-style: none;
+float:left;
+padding: 10px 30px;
+}
+.navbar input{
+    border-radius: 20px;
+}
+
+.search{
+    padding: 10px 30px;
+    float:right;   
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li a{
+    font-size: 15pt;
+    text-decoration: none;
+    color: beige;
+}
+.navbar li a:hover{
+    color: rgb(234, 218, 218);
+}
